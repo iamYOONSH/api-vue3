@@ -1,0 +1,24 @@
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/api_vue3
+    username: root
+    password: 1234
+
+  jpa:
+    generate-ddl: true
+    hibernate.ddl-auto: create
+    show-sql: true
+
+
+logging:
+  level:
+    com.yoon.api: debug
+
+  file:
+    path: logging
+
