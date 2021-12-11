@@ -33,7 +33,7 @@ test {
 
 // @SpringBootApplication 이 선언된 MainClass 설정
 bootJar {
-	mainClassName = 'com.yoon.api.ApiApplication'
+	bootJarMainClassName = 'com.yoon.api.ApiApplication'
 }
 
 // profiles 설정
