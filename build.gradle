@@ -7,6 +7,7 @@ plugins {
 group = 'com.yoon'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+targetCompatibility = '11'
 
 configurations {
 	compileOnly {
@@ -31,15 +32,9 @@ test {
 	useJUnitPlatform()
 }
 
-// @SpringBootApplication 이 선언된 MainClass 설정
-bootJar {
-	bootJarMainClassName = 'com.yoon.api.ApiApplication'
-}
 
-// profiles 설정
-bootRun {
-	String activeProfile = System.properties['spring.profiles.active']
-	systemProperty "spring.profiles.active", activeProfile
+bootJar {
+	mainClass = 'com.yoon.api.ApiApplication'
 }
 
 
